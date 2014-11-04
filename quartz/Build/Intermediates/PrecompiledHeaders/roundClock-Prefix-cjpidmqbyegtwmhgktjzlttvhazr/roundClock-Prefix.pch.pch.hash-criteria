@@ -1,0 +1,26 @@
+Contents of /Users/evan/Desktop/Projects/roundClock/quartz/roundClock/roundClock/roundClock-Prefix.pch
+-x
+objective-c
+-arch
+x86_64
+-std=gnu99
+-fobjc-arc
+-fmodules
+-fmodules-cache-path=/Users/evan/Library/Developer/Xcode/DerivedData/ModuleCache
+-fpascal-strings
+-O0
+-DDEBUG=1
+-isysroot
+/Volumes/Magneto/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+-fasm-blocks
+-mmacosx-version-min=10.9
+-g
+-iquote
+-iquote
+-I/Users/evan/Desktop/Projects/roundClock/quartz/roundClock/Build/Products/Debug/include
+-I/Volumes/Magneto/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+-F/Users/evan/Desktop/Projects/roundClock/quartz/roundClock/Build/Products/Debug
+x86_64-apple-darwin13.4.0
+"4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40)"
+SDK_PRODUCT_BUILD_VERSION=13C64
+13C64

@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20BFA8BC19F61F37004F4761 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BFA8BB19F61F37004F4761 /* Quartz.framework */; };
+		20BFA8BE19F61F37004F4761 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BFA8BD19F61F37004F4761 /* Cocoa.framework */; };
+		20BFA8C819F61F37004F4761 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20BFA8C619F61F37004F4761 /* InfoPlist.strings */; };
+		20BFA8CB19F61F37004F4761 /* roundClockPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BFA8CA19F61F37004F4761 /* roundClockPlugIn.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20BFA8B819F61F37004F4761 /* roundClock.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = roundClock.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		20BFA8BB19F61F37004F4761 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		20BFA8BD19F61F37004F4761 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		20BFA8C019F61F37004F4761 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		20BFA8C119F61F37004F4761 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		20BFA8C219F61F37004F4761 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		20BFA8C519F61F37004F4761 /* roundClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "roundClock-Info.plist"; sourceTree = "<group>"; };
+		20BFA8C719F61F37004F4761 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20BFA8C919F61F37004F4761 /* roundClockPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = roundClockPlugIn.h; sourceTree = "<group>"; };
+		20BFA8CA19F61F37004F4761 /* roundClockPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = roundClockPlugIn.m; sourceTree = "<group>"; };
+		20BFA8CC19F61F37004F4761 /* roundClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "roundClock-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20BFA8B419F61F37004F4761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BFA8BE19F61F37004F4761 /* Cocoa.framework in Frameworks */,
+				20BFA8BC19F61F37004F4761 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20BFA8AE19F61F37004F4761 = {
+			isa = PBXGroup;
+			children = (
+				20BFA8C319F61F37004F4761 /* roundClock */,
+				20BFA8BA19F61F37004F4761 /* Frameworks */,
+				20BFA8B919F61F37004F4761 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20BFA8B919F61F37004F4761 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20BFA8B819F61F37004F4761 /* roundClock.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20BFA8BA19F61F37004F4761 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20BFA8BB19F61F37004F4761 /* Quartz.framework */,
+				20BFA8BD19F61F37004F4761 /* Cocoa.framework */,
+				20BFA8BF19F61F37004F4761 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20BFA8BF19F61F37004F4761 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20BFA8C019F61F37004F4761 /* Foundation.framework */,
+				20BFA8C119F61F37004F4761 /* CoreData.framework */,
+				20BFA8C219F61F37004F4761 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		20BFA8C319F61F37004F4761 /* roundClock */ = {
+			isa = PBXGroup;
+			children = (
+				20BFA8C919F61F37004F4761 /* roundClockPlugIn.h */,
+				20BFA8CA19F61F37004F4761 /* roundClockPlugIn.m */,
+				20BFA8C419F61F37004F4761 /* Supporting Files */,
+			);
+			path = roundClock;
+			sourceTree = "<group>";
+		};
+		20BFA8C419F61F37004F4761 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20BFA8C519F61F37004F4761 /* roundClock-Info.plist */,
+				20BFA8C619F61F37004F4761 /* InfoPlist.strings */,
+				20BFA8CC19F61F37004F4761 /* roundClock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20BFA8B719F61F37004F4761 /* roundClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20BFA8CF19F61F37004F4761 /* Build configuration list for PBXNativeTarget "roundClock" */;
+			buildPhases = (
+				20BFA8B319F61F37004F4761 /* Sources */,
+				20BFA8B419F61F37004F4761 /* Frameworks */,
+				20BFA8B519F61F37004F4761 /* Resources */,
+				20BFA8B619F61F37004F4761 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = roundClock;
+			productName = roundClock;
+			productReference = 20BFA8B819F61F37004F4761 /* roundClock.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20BFA8AF19F61F37004F4761 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Evan Bovie";
+			};
+			buildConfigurationList = 20BFA8B219F61F37004F4761 /* Build configuration list for PBXProject "roundClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 20BFA8AE19F61F37004F4761;
+			productRefGroup = 20BFA8B919F61F37004F4761 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20BFA8B719F61F37004F4761 /* roundClock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20BFA8B519F61F37004F4761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BFA8C819F61F37004F4761 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20BFA8B619F61F37004F4761 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/roundClock.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/roundClock.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20BFA8B319F61F37004F4761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BFA8CB19F61F37004F4761 /* roundClockPlugIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20BFA8C619F61F37004F4761 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20BFA8C719F61F37004F4761 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20BFA8CD19F61F37004F4761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		20BFA8CE19F61F37004F4761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		20BFA8D019F61F37004F4761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "roundClock/roundClock-Prefix.pch";
+				INFOPLIST_FILE = "roundClock/roundClock-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		20BFA8D119F61F37004F4761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "roundClock/roundClock-Prefix.pch";
+				INFOPLIST_FILE = "roundClock/roundClock-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20BFA8B219F61F37004F4761 /* Build configuration list for PBXProject "roundClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20BFA8CD19F61F37004F4761 /* Debug */,
+				20BFA8CE19F61F37004F4761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20BFA8CF19F61F37004F4761 /* Build configuration list for PBXNativeTarget "roundClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20BFA8D019F61F37004F4761 /* Debug */,
+				20BFA8D119F61F37004F4761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20BFA8AF19F61F37004F4761 /* Project object */;
+}

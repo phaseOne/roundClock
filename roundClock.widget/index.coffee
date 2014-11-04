@@ -1,6 +1,6 @@
 # Read style section for settings (e.g. retina scaling, colors)
 
-# replace with "date +%-H,%M,%-S" if you want 24h
+# replace command with "date +%-H,%M,%-S" to display in 24hr mode
 command: "date +%-I,%M,%-S"
 
 refreshFrequency: 1000
@@ -38,7 +38,7 @@ update: (output) ->
 
   $('#min-ln').css('stroke-dashoffset',circ - ( ( parseInt(time[1]) + ( time[2] / 60 ) ) / 60 ) * circ)
   $('#sec-ln').css('-webkit-transform','rotate('+( time[2] / 60 ) * 360+'deg)')
-  $('#hr-ln').css('-webkit-transform','rotate('+( ( parseInt(time[0] %12) + ( time[1] / 60 ) ) / 12 ) * 360+'deg)')
+  $('#hr-ln').css('-webkit-transform','rotate('+( ( parseInt(time[0] % 12) + ( time[1] / 60 ) ) / 12 ) * 360+'deg)')
 
 style: """
   /* Settings */

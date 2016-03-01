@@ -3,6 +3,13 @@
 # replace command with "date +%-H,%M,%-S" to display in 24hr mode
 command: "date +%-I,%M,%-S"
 
+# elements to show or hide
+appearance =
+  secDigit: true
+  secHand : true
+
+appearance : appearance
+
 refreshFrequency: 1000
 
 render: (output) -> """
@@ -23,7 +30,7 @@ render: (output) -> """
 </svg>
 
 <div id="digits">
-  <span id="hr-dig">0</span><span id="min-dig">00</span><div id="sec-dig">0</div>
+  <span id="hr-dig"></span><span id="min-dig"></span><div id="sec-dig"></div>
 </div>
 """
 
@@ -34,10 +41,12 @@ update: (output) ->
 
   $('#hr-dig').text time[0]
   $('#min-dig').text time[1]
-  $('#sec-dig').text time[2]
+  if @appearance.secDigit
+    $('#sec-dig').text time[2]
 
   $('#min-ln').css('stroke-dashoffset',circ - ( ( parseInt(time[1]) + ( time[2] / 60 ) ) / 60 ) * circ)
-  $('#sec-ln').css('-webkit-transform','rotate('+( time[2] / 60 ) * 360+'deg)')
+  if @appearance.secHand
+    $('#sec-ln').css('-webkit-transform','rotate('+( time[2] / 60 ) * 360+'deg)')
   $('#hr-ln').css('-webkit-transform','rotate('+( ( parseInt(time[0] % 12) + ( time[1] / 60 ) ) / 12 ) * 360+'deg)')
 
 style: """

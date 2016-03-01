@@ -1,14 +1,14 @@
 # Read style section for settings (e.g. retina scaling, colors)
 
-# replace command with "date +%-H,%M,%-S" to display in 24hr mode
-command: "date +%-I,%M,%-S"
-
 # elements to show or hide
 appearance =
   secDigit: true
   secHand : true
 
 appearance : appearance
+
+# replace command with "date +%-H,%M,%-S" to display in 24hr mode
+command: "date +%-I,%M,%-S"
 
 refreshFrequency: 1000
 

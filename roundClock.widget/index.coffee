@@ -45,8 +45,7 @@ update: (output) ->
     $('#sec-dig').text time[2]
 
   $('#min-ln').css('stroke-dashoffset',circ - ( ( parseInt(time[1]) + ( time[2] / 60 ) ) / 60 ) * circ)
-  if @appearance.secHand
-    $('#sec-ln').css('-webkit-transform','rotate('+( time[2] / 60 ) * 360+'deg)')
+  $('#sec-ln').css('-webkit-transform','rotate('+( time[2] / 60 ) * 360+'deg)')
   $('#hr-ln').css('-webkit-transform','rotate('+( ( parseInt(time[0] % 12) + ( time[1] / 60 ) ) / 12 ) * 360+'deg)')
 
 style: """
@@ -79,7 +78,10 @@ style: """
   #hr-mk polygon
     fill: main
   #sec-mk polygon
-    fill: second
+    if #{appearance.secHand}
+      fill: second
+    else
+      fill: none
   .line
     -webkit-transform-origin: 100% 100%    // centers the ticks
 

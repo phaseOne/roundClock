@@ -1,18 +1,25 @@
 roundClock
 ==========
 
-a twist on the traditional analogue clock, widget for Übersicht
+A twist on the traditional analogue clock created by [Evan Bovie](https://github.com/phaseOne).
+
+A widget for [Übersicht](http://tracesof.net/uebersicht/).
 
 ![](https://github.com/phaseOne/roundClock/raw/master/screenshot.jpg)
 
 ## Options
 
-The `seconds` indicators (digits and hand marker) can be visible (true) or hidden (false) by setting the appropriate variable at the top of `index.coffee`:
+Options by [Joe Creighton](https://github.com/joecreighton).
+
+Set the appropriate variables at the top of `index.coffee`.  By default, the `seconds` indicators (digits and hand marker) are both visible (`true`) and the time is presented in a 24-hour format.
+
   ```
   appearance =
     secDigit: true
     secHand : true
+    showAMPM: false
   ```
 
 ## License
+
 * [Mozilla Public License 2.0](https://www.mozilla.org/MPL/2.0/)

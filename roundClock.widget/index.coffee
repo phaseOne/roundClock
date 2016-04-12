@@ -4,11 +4,11 @@
 appearance =
   secDigit: true
   secHand : true
+  showAMPM: true   # false will use 24-hour time; true will use 12-hour time
 
-appearance : appearance
+appearance: appearance
 
-# replace command with "date +%-H,%M,%-S" to display in 24hr mode
-command: "date +%-I,%M,%-S"
+command: "date +%H,%M,%S"
 
 refreshFrequency: 1000
 
@@ -30,7 +30,7 @@ render: (output) -> """
 </svg>
 
 <div id="digits">
-  <span id="hr-dig"></span><span id="min-dig"></span><div id="sec-dig"></div>
+  <span id="hr-dig"></span><span id="min-dig"></span><span id="ampm"></span><div id="sec-dig"></div>
 </div>
 """
 
@@ -38,6 +38,13 @@ update: (output) ->
   time = output.split(',')
 
   circ = Math.PI*2*100
+
+  if @appearance.showAMPM
+    if time[0] > 12
+      time[0] = time[0] - 12
+      $('#ampm').text "pm"
+    else
+      $('#ampm').text "am"
 
   $('#hr-dig').text time[0]
   $('#min-dig').text time[1]
@@ -50,9 +57,9 @@ update: (output) ->
 
 style: """
   /* Settings */
-  main = #121212
-  second = rgb(191, 0, 0)
-  background = rgba(255,255,255,0.15)
+  main = #ffffff
+  second = rgba(#CC0000, 0.75)
+  background = rgba(0, 0, 0, 0.75)
   transitions = false                   // disabled by default to save CPU cycles
   scale = 1                             // set to 2 to scale for retina displays
 
@@ -61,8 +68,8 @@ style: """
 
   left: 0%
   bottom: 0%
-  margin-left: 15px * scale
-  margin-bottom: 15px * scale
+  margin-left: 10px * scale
+  margin-bottom: 10px * scale
 
   width: 225px * scale
   height: 225px * scale
@@ -105,21 +112,26 @@ style: """
     margin-top: -38px * scale
     width:    215px * scale
 
-    font-family: HelveticaNeue
+    font-family: Futura-Medium
     font-size: 72px * scale
     line-height: 1
     text-align: center
     -webkit-font-smoothing: antialiased    // the transparent bg makes subpixel look bad
     color: main
   #hr-dig
-    font-family: HelveticaNeue-Bold
+    font-family: Futura-Medium
     letter-spacing: -3px * scale
     margin-right: 3px * scale
   #min-dig
     font-size: 48px * scale
     letter-spacing: -2px * scale
+  #ampm
+    font-family: Futura-Medium
+    font-size: 20px * scale
+    margin-left: 3px * scale
   #sec-dig
-    font-family: HelveticaNeue-Light
+    font-family: Futura-Medium
     font-size: 24px * scale
     color: second
 """
+

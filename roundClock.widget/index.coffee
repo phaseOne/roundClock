@@ -1,10 +1,10 @@
 # Read style section for settings (e.g. retina scaling, colors)
 
-# elements to show or hide
+# options to set
 appearance =
   secDigit: true
   secHand : true
-  showAMPM: true   # false will use 24-hour time; true will use 12-hour time
+  showAMPM: false
 
 appearance: appearance
 

@@ -5,7 +5,7 @@ A twist on the traditional analogue clock created by [Evan Bovie](https://github
 
 A widget for [Übersicht](http://tracesof.net/uebersicht/).
 
-![](https://github.com/phaseOne/roundClock/raw/master/screenshot.jpg)
+![](screenshot.jpg)
 
 ## Options
 
@@ -19,6 +19,7 @@ Set the appropriate variables at the top of `index.coffee`.  By default, the `se
     secHand : true
     showAMPM: false
   ```
+![](screenshot-dark.jpg)
 
 ## License
 

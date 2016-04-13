@@ -19,7 +19,6 @@ Set the appropriate variables at the top of `index.coffee`.  By default, the `se
     secHand : true
     showAMPM: false
   ```
-![](screenshot-dark.jpg)
 
 ## License
 

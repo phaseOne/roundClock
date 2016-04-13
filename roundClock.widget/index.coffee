@@ -58,9 +58,9 @@ update: (output) ->
 
 style: """
   /* Settings */
-  main = #ffffff
-  second = rgba(#CC0000, 0.75)
-  background = rgba(0, 0, 0, 0.75)
+  main = #121212
+  second = rgb(191, 0, 0)
+  background = rgba(255,255,255,0.15)
   transitions = false                   // disabled by default to save CPU cycles
   scale = 1                             // set to 2 to scale for retina displays
 
@@ -69,8 +69,8 @@ style: """
 
   left: 0%
   bottom: 0%
-  margin-left: 10px * scale
-  margin-bottom: 10px * scale
+  margin-left: 15px * scale
+  margin-bottom: 15px * scale
 
   width: 225px * scale
   height: 225px * scale
@@ -113,25 +113,25 @@ style: """
     margin-top: -38px * scale
     width:    215px * scale
 
-    font-family: Futura-Medium
+    font-family: HelveticaNeue
     font-size: 72px * scale
     line-height: 1
     text-align: center
     -webkit-font-smoothing: antialiased    // the transparent bg makes subpixel look bad
     color: main
   #hr-dig
-    font-family: Futura-Medium
+    font-family: HelveticaNeue-Bold
     letter-spacing: -3px * scale
     margin-right: 3px * scale
   #min-dig
     font-size: 48px * scale
     letter-spacing: -2px * scale
   #ampm
-    font-family: Futura-Medium
-    font-size: 20px * scale
+    font-family: HelveticaNeue-Light
+    font-size: 25px * scale
     margin-left: 3px * scale
   #sec-dig
-    font-family: Futura-Medium
+    font-family: HelveticaNeue-Light
     font-size: 24px * scale
     color: second
 """

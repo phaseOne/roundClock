@@ -4,7 +4,7 @@
 appearance =
   secDigit: true
   secHand : true
-  showAMPM: true
+  showAMPM: false
 
 appearance: appearance
 
@@ -46,6 +46,7 @@ update: (output) ->
     else if time[0] < 12
       if time[0] < 1 then time[0] = 12
       $('#ampm').text "am"
+    time[0] = Number(time[0])
 
   $('#hr-dig').text time[0]
   $('#min-dig').text time[1]
@@ -128,7 +129,7 @@ style: """
     letter-spacing: -2px * scale
   #ampm
     font-family: HelveticaNeue-Light
-    font-size: 25px * scale
+    font-size: 20px * scale
     margin-left: 3px * scale
   #sec-dig
     font-family: HelveticaNeue-Light

@@ -4,6 +4,7 @@
 appearance =
   secDigit: true
   secHand : true
+  milTime : true
   showAMPM: false
 
 appearance: appearance
@@ -39,13 +40,13 @@ update: (output) ->
 
   circ = Math.PI*2*100
 
-  if @appearance.showAMPM
-    $('#ampm').text "pm"
+  if ! @appearance.milTime
+    if @appearance.showAMPM then $('#ampm').text "pm"
     if time[0] > 12
       time[0] = time[0] - 12
     else if time[0] < 12
       if time[0] < 1 then time[0] = 12
-      $('#ampm').text "am"
+      if @appearance.showAMPM then $('#ampm').text "am"
     time[0] = Number(time[0])
 
   $('#hr-dig').text time[0]
@@ -129,7 +130,7 @@ style: """
     letter-spacing: -2px * scale
   #ampm
     font-family: HelveticaNeue-Light
-    font-size: 20px * scale
+    font-size: 25px * scale
     margin-left: 3px * scale
   #sec-dig
     font-family: HelveticaNeue-Light

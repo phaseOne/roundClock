@@ -11,7 +11,7 @@ A widget for [Übersicht](http://tracesof.net/uebersicht/).
 
 Options by [Joe Creighton](https://github.com/joecreighton).
 
-Set the appropriate variables at the top of `index.coffee`.  By default, the `seconds` indicators (digits and hand marker) are both visible (`true`) while the time is presented in a 24-hour format (`milTime` or military time); if the 12-hour format is chosen instead, you have the option to hide or show the am/pm indicator.
+Set the appropriate variables at the top of `index.coffee`.  By default, the `seconds` indicators (digits and hand marker) are both visible (`true`) and the time is presented in a 24-hour format (`milTime` or military time); if a 12-hour format is chosen, you have the option to show an am/pm indicator.
 
   ```
   appearance =

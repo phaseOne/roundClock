@@ -1,7 +1,15 @@
 # Read style section for settings (e.g. retina scaling, colors)
 
-# replace command with "date +%-H,%M,%-S" to display in 24hr mode
-command: "date +%-I,%M,%-S"
+# options to set
+appearance =
+  secDigit: true
+  secHand : true
+  milTime : true
+  showAMPM: false
+
+appearance: appearance
+
+command: "date +%H,%M,%S"
 
 refreshFrequency: 1000
 
@@ -23,7 +31,7 @@ render: (output) -> """
 </svg>
 
 <div id="digits">
-  <span id="hr-dig">0</span><span id="min-dig">00</span><div id="sec-dig">0</div>
+  <span id="hr-dig"></span><span id="min-dig"></span><span id="ampm"></span><div id="sec-dig"></div>
 </div>
 """
 
@@ -32,9 +40,19 @@ update: (output) ->
 
   circ = Math.PI*2*100
 
+  if ! @appearance.milTime
+    if @appearance.showAMPM then $('#ampm').text "pm"
+    if time[0] > 12
+      time[0] = time[0] - 12
+    else if time[0] < 12
+      if time[0] < 1 then time[0] = 12
+      if @appearance.showAMPM then $('#ampm').text "am"
+    time[0] = Number(time[0])
+
   $('#hr-dig').text time[0]
   $('#min-dig').text time[1]
-  $('#sec-dig').text time[2]
+  if @appearance.secDigit
+    $('#sec-dig').text time[2]
 
   $('#min-ln').css('stroke-dashoffset',circ - ( ( parseInt(time[1]) + ( time[2] / 60 ) ) / 60 ) * circ)
   $('#sec-ln').css('-webkit-transform','rotate('+( time[2] / 60 ) * 360+'deg)')
@@ -70,7 +88,10 @@ style: """
   #hr-mk polygon
     fill: main
   #sec-mk polygon
-    fill: second
+    if #{appearance.secHand}
+      fill: second
+    else
+      fill: none
   .line
     -webkit-transform-origin: 100% 100%    // centers the ticks
 
@@ -107,8 +128,13 @@ style: """
   #min-dig
     font-size: 48px * scale
     letter-spacing: -2px * scale
+  #ampm
+    font-family: HelveticaNeue-Light
+    font-size: 25px * scale
+    margin-left: 3px * scale
   #sec-dig
     font-family: HelveticaNeue-Light
     font-size: 24px * scale
     color: second
 """
+
